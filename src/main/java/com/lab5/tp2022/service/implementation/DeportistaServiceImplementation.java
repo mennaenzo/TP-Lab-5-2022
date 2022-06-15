@@ -21,14 +21,13 @@ public class DeportistaServiceImplementation implements DeportistaService {
 
     @Override
     public ResponseEntity add(Deportista deportistaR) throws HttpClientErrorException {
-        if (findByNameLastName(deportistaR.getNombre(), deportistaR.getApellido()) == null)
+        if (findByNameLastName(deportistaR.getNombre(), deportistaR.getApellido()).getBody() != null)
         {
+            throw new HttpClientErrorException(HttpStatus.CONFLICT, "Ya existe el mismo deportista");
+        }else{
             Deportista deportista = deportistaRepository.save(deportistaR);
 
-            String PATH = "deportista";
-            return ResponseEntity.status(HttpStatus.CREATED).location(EntityURLBuilder.buildURL(PATH, deportista.getId().toString())).build();
-        }else{
-            throw new HttpClientErrorException(HttpStatus.CONFLICT, "Ya existe el mismo deportista");
+            return ResponseEntity.status(HttpStatus.CREATED).location(EntityURLBuilder.buildURL("deportista", deportista.getId().toString())).build();
         }
     }
 
