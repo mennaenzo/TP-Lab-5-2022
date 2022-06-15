@@ -1,0 +1,12 @@
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:tp
+#    h2:
+#      console:
+#        enabled: true
+#        path: /console
+#        settings:
+#          web-allow-others: true
+#  h2:
+#    console:
+#      enabled: true

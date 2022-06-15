@@ -19,7 +19,7 @@ public class SwaggerConfig {
     public Docket apiDocket(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.UTN.Integrador.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.lab5.tp2022.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

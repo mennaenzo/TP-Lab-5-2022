@@ -1,6 +1,5 @@
 package com.lab5.tp2022.service.implementation;
 
-import com.lab5.tp2022.exception.ErrorBody;
 import com.lab5.tp2022.model.BasketballLiveMatchesList;
 import com.lab5.tp2022.service.BasketballLiveMatchesService;
 import org.springframework.http.HttpStatus;

@@ -23,7 +23,7 @@ public class DeportistaServiceImplementation implements DeportistaService {
     public ResponseEntity add(Deportista deportistaR) throws HttpClientErrorException {
         if (findByNameLastName(deportistaR.getNombre(), deportistaR.getApellido()).getBody() != null)
         {
-            throw new HttpClientErrorException(HttpStatus.CONFLICT, "Ya existe el mismo deportista");
+            throw new HttpClientErrorException(HttpStatus.CONFLICT, "Ya existe el mismo deportista.");
         }else{
             Deportista deportista = deportistaRepository.save(deportistaR);
 
@@ -33,7 +33,7 @@ public class DeportistaServiceImplementation implements DeportistaService {
 
     @Override
     public ResponseEntity<Deportista> findById(Integer id) {
-        Deportista deportista = deportistaRepository.findById(id).orElseThrow(() -> new HttpClientErrorException(HttpStatus.CONFLICT, "This Deportista not exist"));
+        Deportista deportista = deportistaRepository.findById(id).orElseThrow(() -> new HttpClientErrorException(HttpStatus.CONFLICT, "Deportista no existente."));
 
         return ResponseEntity.status(HttpStatus.OK).body(deportista);
     }
