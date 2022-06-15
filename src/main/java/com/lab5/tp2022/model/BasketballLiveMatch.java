@@ -29,22 +29,24 @@ public class BasketballLiveMatch {
     private Integer leagueID;
     @JsonAlias("Odd")
     private Double odd;
+    @JsonAlias("Live Away Odd")
+    private Double liveAwayOdd;
     @JsonAlias("Live Home Odd")
     private Double liveHomeOdd;
     @JsonAlias("Match ID")
     private Integer matchID;
     @JsonAlias("Period 1 Away")
-    private Integer period1Away;
+    private String period1Away;
     @JsonAlias("Period 1 Home")
-    private Integer period1Home;
+    private String period1Home;
     @JsonAlias("Period 2 Away")
-    private Integer period2Away;
+    private String period2Away;
     @JsonAlias("Period 2 Home")
-    private Integer  period2Home;
+    private String  period2Home;
     @JsonAlias("Period 3 Away")
-    private Integer  period3Away;
+    private String  period3Away;
     @JsonAlias("Period 3 Home")
-    private Integer  period3Home;
+    private String  period3Home;
     @JsonAlias("Status")
     private String status;
 }

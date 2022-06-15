@@ -1,5 +1,6 @@
 package com.lab5.tp2022.controller;
 
+import com.lab5.tp2022.model.BasketballLiveMatchesList;
 import com.lab5.tp2022.service.BasketballLiveMatchesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +21,7 @@ public class BasketballLiveMatchesController {
     }
 
     @GetMapping("/")
-    public ResponseEntity getBasketballLiveMatches() throws IOException, InterruptedException{
+    public ResponseEntity<BasketballLiveMatchesList> getBasketballLiveMatches() throws IOException, InterruptedException{
         return basketballLiveMatchesService.getBasketballLiveMatches();
     }
 }
