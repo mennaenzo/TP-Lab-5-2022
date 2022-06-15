@@ -41,7 +41,7 @@ public class DeportistaServiceImplementation implements DeportistaService {
 
     @Override
     public ResponseEntity<Deportista> findByNameLastName(String name, String lastName) {
-        Deportista deportista = deportistaRepository.findByNameLastName(name, lastName);
+        Deportista deportista = deportistaRepository.findByNombreAndApellido(name, lastName);
         return deportista == null ? ResponseEntity.status(HttpStatus.NO_CONTENT).build() : ResponseEntity.status(HttpStatus.OK).body(deportista);
     }
 }

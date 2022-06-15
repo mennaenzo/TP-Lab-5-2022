@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DeportistaRepository extends JpaRepository<Deportista,Integer> {
-    Deportista findByNameLastName(String name, String lastName);
+    Deportista findByNombreAndApellido(String name, String lastName);
 }

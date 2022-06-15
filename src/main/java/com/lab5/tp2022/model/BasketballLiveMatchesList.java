@@ -12,5 +12,5 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class BasketballLiveMatchesList {
-    private List<BasketballLiveMatch> basketballLiveMatchesList;
+    private List<BasketballLiveMatch> matches;
 }

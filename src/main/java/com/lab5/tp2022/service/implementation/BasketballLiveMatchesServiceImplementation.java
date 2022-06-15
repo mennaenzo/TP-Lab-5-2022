@@ -28,6 +28,6 @@ public class BasketballLiveMatchesServiceImplementation implements BasketballLiv
         HttpResponse<BasketballLiveMatchesList> response = HttpClient.newHttpClient().send(request, new JsonBodyHandler<>(BasketballLiveMatchesList.class));
         System.out.println(response.body());
 
-        return response.body().getBasketballLiveMatchesList().isEmpty() ? ResponseEntity.status(HttpStatus.OK).body(new ErrorBody("No hay partidos en vivo en este momento", 200)) : ResponseEntity.status(HttpStatus.OK).body(response);
+        return response.body().getMatches().isEmpty() ? ResponseEntity.status(HttpStatus.OK).body(new ErrorBody("No hay partidos en vivo en este momento", 200)) : ResponseEntity.status(HttpStatus.OK).body(response);
     }
 }
