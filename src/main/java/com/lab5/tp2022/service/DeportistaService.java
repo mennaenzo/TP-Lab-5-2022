@@ -1,6 +1,6 @@
-package service;
+package com.lab5.tp2022.service;
 
-import model.Deportista;
+import com.lab5.tp2022.model.Deportista;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
 

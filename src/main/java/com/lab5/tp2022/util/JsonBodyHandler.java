@@ -1,4 +1,4 @@
-package util;
+package com.lab5.tp2022.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

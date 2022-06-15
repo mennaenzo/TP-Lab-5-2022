@@ -1,4 +1,4 @@
-package util;
+package com.lab5.tp2022.util;
 
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 

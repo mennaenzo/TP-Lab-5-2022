@@ -1,4 +1,4 @@
-package model;
+package com.lab5.tp2022.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

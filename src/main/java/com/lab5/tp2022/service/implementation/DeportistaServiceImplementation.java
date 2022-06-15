@@ -1,15 +1,14 @@
-package service.implementation;
+package com.lab5.tp2022.service.implementation;
 
-import model.Deportista;
+import com.lab5.tp2022.model.Deportista;
+import com.lab5.tp2022.repository.DeportistaRepository;
+import com.lab5.tp2022.service.DeportistaService;
+import com.lab5.tp2022.util.EntityURLBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
-import repository.DeportistaRepository;
-import service.DeportistaService;
-
-import static util.EntityURLBuilder.buildURL;
 
 @Service
 public class DeportistaServiceImplementation implements DeportistaService {
@@ -27,7 +26,7 @@ public class DeportistaServiceImplementation implements DeportistaService {
             Deportista deportista = deportistaRepository.save(deportistaR);
 
             String PATH = "deportista";
-            return ResponseEntity.status(HttpStatus.CREATED).location(buildURL(PATH, deportista.getId().toString())).build();
+            return ResponseEntity.status(HttpStatus.CREATED).location(EntityURLBuilder.buildURL(PATH, deportista.getId().toString())).build();
         }else{
             throw new HttpClientErrorException(HttpStatus.CONFLICT, "Ya existe el mismo deportista");
         }

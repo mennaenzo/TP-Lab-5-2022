@@ -1,4 +1,4 @@
-package exception;
+package com.lab5.tp2022.exception;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

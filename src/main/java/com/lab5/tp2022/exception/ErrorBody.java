@@ -1,4 +1,4 @@
-package exception;
+package com.lab5.tp2022.exception;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeName;

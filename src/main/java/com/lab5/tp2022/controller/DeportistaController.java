@@ -1,10 +1,10 @@
-package controller;
+package com.lab5.tp2022.controller;
 
-import model.Deportista;
+import com.lab5.tp2022.service.DeportistaService;
+import com.lab5.tp2022.model.Deportista;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.DeportistaService;
 
 @RestController
 @RequestMapping("/deportista")
